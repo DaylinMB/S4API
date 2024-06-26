@@ -1,30 +1,21 @@
-# Sprint 3 IT Academy | Video management tool
+# Sprint 4 Daylin Mejia
 
 ## Introduction
 
-Una pagina que muestra chistes aleatorios a los empleados de una empresa para ayudar su rendimiento comenzando el dia con buen humor, los chiste que muestra son sobre padres y Chuck Norris. Tambien les permite calificar los chistes en un rango del 1 al 3.
-En la parte superior de la pantantalla tambien se muestra el clima, algo que tambien les puede ayudar a primera hora del dia.
+Este proyecto consiste en una página web que proporciona chistes aleatorios para ayudar a los empleados de una empresa a empezar el día con buen humor. Los chistes ofrecidos son de dos tipos: chistes normales y chistes sobre Chuck Norris. Además, los usuarios tienen la posibilidad de calificar cada chiste con una puntuación del 1 al 3.
 
+En la parte superior de la pantalla, también se muestra la información meteorológica, lo cual puede ser útil para planificar el día desde primera hora.
 
-## Introduction
-no olvides el comando siguiente, para visualizar cambios
+## Ejecución del proyecto
+
+Para visualizar los cambios o ejecutar en modo de observación (watch), utiliza el siguiente comando:
 ```bash
-$ nmx tsc typescript-project/index.ts
+$ npx tsc index.ts -W O npm start
 ```
+Este comando asegura que cualquier cambio en el archivo index.ts se compile automáticamente y que el proyecto se inicie correctamente con npm start.
 
-## Requirements
+## Detalles del Código
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/DaylinMB/S4API/tree/main
-```
+El código proporciona dos funciones asincrónicas para obtener chistes aleatorios desde diferentes fuentes (printJoke para chistes normales y jokesChuckNorris para chistes de Chuck Norris). Estas funciones se activan al hacer clic en un botón y muestran el chiste obtenido en el elemento jokesHere del DOM.
 
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
-
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
+Además, hay funcionalidad para registrar la calificación de los chistes y mostrar la información meteorológica actual de Barcelona, incluyendo una representación gráfica del estado del cielo.

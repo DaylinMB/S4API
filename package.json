@@ -3,6 +3,6 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "start": "npx tsc -w typescript-project/index.ts"
+    "start": "npx tsc index.ts -w"
   }
 }
