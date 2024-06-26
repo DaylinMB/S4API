@@ -36,7 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var jokesElement = document.getElementById("jokesHere");
 var btnJoke = document.getElementById("btnJoke");
-//Jokes
 function printJoke() {
     return __awaiter(this, void 0, void 0, function () {
         var response, data, error_1;
@@ -130,15 +129,14 @@ function addJokeToReport(score) {
     }
     console.log(reportAcudits);
 }
-//Buttons
 var btnSad = document.getElementById("btnEmoji1");
 var btnMeh = document.getElementById("btnEmoji2");
 var btnHappy = document.getElementById("btnEmoji3");
 btnSad.addEventListener("click", function () { return addJokeToReport(1); });
 btnMeh.addEventListener("click", function () { return addJokeToReport(2); });
 btnHappy.addEventListener("click", function () { return addJokeToReport(3); });
-//Weather
 document.addEventListener("DOMContentLoaded", function () {
+    getRandomJoke(); // Mostrar una broma al cargar la página
     var weatherElement = document.getElementById("weatherd");
     var weatherIcon = document.getElementById("weatherIcon");
     printWeather();

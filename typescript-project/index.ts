@@ -1,9 +1,6 @@
 const jokesElement = document.getElementById("jokesHere") as HTMLElement;
 const btnJoke = document.getElementById("btnJoke") as HTMLButtonElement;
 
-
-
-//Jokes
 async function printJoke(): Promise<string> {
     try {
         const response = await fetch("https://icanhazdadjoke.com/", {
@@ -69,6 +66,7 @@ function getRandomJoke(): void {
         });
     }
 }
+
 btnJoke.addEventListener("click", getRandomJoke);
 
 function addJokeToReport(score: number): void {
@@ -86,8 +84,6 @@ function addJokeToReport(score: number): void {
     console.log(reportAcudits);
 }
 
-
-//Buttons
 const btnSad = document.getElementById("btnEmoji1") as HTMLButtonElement;
 const btnMeh = document.getElementById("btnEmoji2") as HTMLButtonElement;
 const btnHappy = document.getElementById("btnEmoji3") as HTMLButtonElement;
@@ -96,11 +92,12 @@ btnSad.addEventListener("click", () => addJokeToReport(1));
 btnMeh.addEventListener("click", () => addJokeToReport(2));
 btnHappy.addEventListener("click", () => addJokeToReport(3));
 
-//Weather
 document.addEventListener("DOMContentLoaded", () => {
+    getRandomJoke(); // Mostrar una broma al cargar la página
+
     const weatherElement = document.getElementById("weatherd") as HTMLElement;
     const weatherIcon = document.getElementById("weatherIcon") as HTMLImageElement;
-    
+
     printWeather();
 
     function getWeatherIcon(description: string): string {
