@@ -142,11 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
     printWeather();
     function getWeatherIcon(description) {
         var iconMap = {
-            "intervalos nubosos": "nubes.png",
-            "nubes altas": "nubes.png",
-            "soleado": "sol.png",
-            "parcialmente nublado": "nubes.png",
-            "despejado": "sol.png",
+            "intervalos nubosos": "images/nubes.png",
+            "nubes altas": "images/nubes.png",
+            "soleado": "images/sol.png",
+            "parcialmente nublado": "images/nubes.png",
+            "despejado": "images/sol.png",
         };
         // Convertir la descripción a minúsculas para hacer coincidencia
         var lowerDescription = description.toLowerCase();
