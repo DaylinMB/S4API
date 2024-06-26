@@ -93,7 +93,7 @@ btnMeh.addEventListener("click", () => addJokeToReport(2));
 btnHappy.addEventListener("click", () => addJokeToReport(3));
 
 document.addEventListener("DOMContentLoaded", () => {
-    getRandomJoke(); // Mostrar una broma al cargar la página
+    getRandomJoke();
 
     const weatherElement = document.getElementById("weatherd") as HTMLElement;
     const weatherIcon = document.getElementById("weatherIcon") as HTMLImageElement;
@@ -109,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "despejado": "images/sol.png",
         };
 
-        // Convertir la descripción a minúsculas para hacer coincidencia
         const lowerDescription = description.toLowerCase();
         return iconMap[lowerDescription] || "default.png";
     }

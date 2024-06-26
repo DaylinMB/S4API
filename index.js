@@ -136,7 +136,7 @@ btnSad.addEventListener("click", function () { return addJokeToReport(1); });
 btnMeh.addEventListener("click", function () { return addJokeToReport(2); });
 btnHappy.addEventListener("click", function () { return addJokeToReport(3); });
 document.addEventListener("DOMContentLoaded", function () {
-    getRandomJoke(); // Mostrar una broma al cargar la página
+    getRandomJoke();
     var weatherElement = document.getElementById("weatherd");
     var weatherIcon = document.getElementById("weatherIcon");
     printWeather();
@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
             "parcialmente nublado": "images/nubes.png",
             "despejado": "images/sol.png",
         };
-        // Convertir la descripción a minúsculas para hacer coincidencia
         var lowerDescription = description.toLowerCase();
         return iconMap[lowerDescription] || "default.png";
     }
